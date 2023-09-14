@@ -1,23 +1,22 @@
 .navbar-container {
-  background-color: $mainColor002;
-  width: 100vw;
-  height: 8vh;
-  box-shadow: 1px 1px 1px rgb(48, 48, 48);
-  li {
-    cursor: pointer;
-    &:hover {
-      filter: brightness(90%);
+    background-color: $mainColor002;
+    width: 100vw;
+    box-shadow: 1px 1px 1px rgb(48, 48, 48);
+    li {
+        cursor: pointer;
+        &:hover {
+            filter: brightness(90%);
+        }
     }
-  }
 }
 
 .nav-options-container {
-  gap: 50px;
+    gap: 50px;
 }
 
 .logo {
-  font-size: 30px;
-  span {
-    color: $logoColor;
-  }
+    font-size: 30px;
+    span {
+        color: $logoColor;
+    }
 }

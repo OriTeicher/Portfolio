@@ -1,15 +1,16 @@
 //* Setup *
-@import "setup/variables";
-@import "setup/typography";
+@import 'setup/variables';
+@import 'setup/typography';
 
 // * Basics *
-@import "basics/helpers";
-@import "basics/base";
+@import 'basics/helpers';
+@import 'basics/base';
 
 // * Components *
-@import "cmps/Navbar";
-@import "cmps/ContactIcons";
-@import "cmps/IntroPreview";
+@import 'cmps/Navbar';
+@import 'cmps/ContactIcons';
+@import 'cmps/IntroPreview';
 
 // * Utils *
-@import "utils/Logo.scss";
+@import 'utils/Logo.scss';
+@import 'utils/ContainerLayout.scss';

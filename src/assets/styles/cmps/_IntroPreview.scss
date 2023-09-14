@@ -1,19 +1,40 @@
 .intro-container {
-  margin-top: 30px;
-  .main-photo {
-    width: 250px;
-    height: auto;
-    border-radius: 50%;
-  }
-  .main-header {
-    font-size: 2rem;
-    span {
-      color: $logoColor;
+    margin-top: 50px;
+    gap: 20px;
+    .main-photo {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
     }
-  }
-  .role-header {
-    text-align: center;
-    font-size: 1.2em;
-    color: gray;
-  }
+    .main-header {
+        font-size: 2rem;
+        span {
+            color: $logoColor;
+        }
+    }
+    .role-header {
+        text-align: center;
+        font-size: 1.2em;
+        color: gray;
+    }
+    .img-container {
+        max-width: 250px;
+        max-height: 250px;
+    }
+    .description {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .btns-container {
+        text-align: center;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        button {
+            width: 200px;
+            font-size: 1.2em;
+            border-radius: 20px;
+            padding: 5px;
+        }
+    }
 }

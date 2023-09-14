@@ -1,42 +1,53 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  overflow: scroll;
-  overflow-x: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 body {
-  font-family: "Poppins", "Times New Roman", Times, serif;
-  background-color: $mainColor001;
-  color: white;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    background-color: $mainColor001;
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
-  cursor: pointer;
+    cursor: pointer;
+    transition: 0.3s background-color ease-in-out;
 }
 
 .app-container {
-  display: flex;
-  // grid-template-columns: 1fr 1fr 500px;
-  height: fit-content;
-  justify-content: center;
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    outline: none;
+    &:hover {
+        background-color: $logoColor;
+    }
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s background-color ease-in-out;
 }

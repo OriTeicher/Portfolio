@@ -2,9 +2,15 @@
   gap: 5px;
   a {
     cursor: pointer;
+    &:hover {
+      filter: brightness(90%);
+    }
   }
 }
 
 .icon {
-  color: white;
+  svg {
+    color: white;
+    font-size: 1.8em;
+  }
 }

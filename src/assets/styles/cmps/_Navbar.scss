@@ -1,8 +1,8 @@
 .navbar-container {
-  background-color: #101010;
+  background-color: $mainColor002;
   width: 100vw;
   height: 8vh;
-  box-shadow: 3px 3px 3px 0px rgb(59, 59, 59);
+  box-shadow: 1px 1px 1px rgb(48, 48, 48);
   li {
     cursor: pointer;
     &:hover {
@@ -13,4 +13,11 @@
 
 .nav-options-container {
   gap: 50px;
+}
+
+.logo {
+  font-size: 30px;
+  span {
+    color: $logoColor;
+  }
 }

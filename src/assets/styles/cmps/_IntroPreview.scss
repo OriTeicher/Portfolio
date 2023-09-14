@@ -1,0 +1,19 @@
+.intro-container {
+  margin-top: 30px;
+  .main-photo {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+  }
+  .main-header {
+    font-size: 2rem;
+    span {
+      color: $logoColor;
+    }
+  }
+  .role-header {
+    text-align: center;
+    font-size: 1.2em;
+    color: gray;
+  }
+}

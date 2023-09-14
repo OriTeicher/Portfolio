@@ -1,8 +1,6 @@
-import React from "react"
-
 export default function NavList() {
   return (
-    <ul className="nav-options-container">
+    <ul className="nav-options-container flex">
       <li>Home</li>
       <li>About</li>
       <li>Skills & Hobbies</li>

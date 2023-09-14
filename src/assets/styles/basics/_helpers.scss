@@ -2,8 +2,12 @@
   display: flex;
 }
 
-.grid {
-  display: grid;
+.row {
+  flex-direction: row;
+}
+
+.columm {
+  flex-direction: column;
 }
 
 .align-center {

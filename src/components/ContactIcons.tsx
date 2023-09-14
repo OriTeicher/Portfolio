@@ -3,14 +3,14 @@ import { constService } from "../services/consts.service"
 
 export default function ContactIcons() {
   return (
-    <section className="contact-icons-container">
-      <a href={`${constService.githubUrl}`}>
+    <section className="contact-icons-container flex">
+      <a href={`${constService.githubUrl}`} className="icon">
         <GitHub />
       </a>
-      <a href={`${constService.linkedInUrl}`}>
+      <a href={`${constService.linkedInUrl}`} className="icon">
         <LinkedIn />
       </a>
-      <a href={`${constService.gmailAddress}`}>
+      <a href={`${constService.gmailAddress}`} className="icon">
         <Email />
       </a>
     </section>

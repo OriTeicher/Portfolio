@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $mainColor1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.app-container {
+  display: flex;
+  // grid-template-columns: 1fr 1fr 500px;
+  height: fit-content;
+  justify-content: center;
+}

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.0c2d0774.css",
-    "main.js": "/Portfolio/static/js/main.6ba3ac8f.js",
+    "main.css": "/Portfolio/static/css/main.340f532e.css",
+    "main.js": "/Portfolio/static/js/main.6514a2d7.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/ori-vintage.png": "/Portfolio/static/media/ori-vintage.3cfe8c2b7384eded2e3d.png",
     "static/media/super-ori.png": "/Portfolio/static/media/super-ori.dee9aa685373123dd949.png",
@@ -10,12 +10,12 @@
     "static/media/oris-dog.jpg": "/Portfolio/static/media/oris-dog.34532b263bd17f6d3a76.jpg",
     "static/media/regular ori.jpg": "/Portfolio/static/media/regular ori.7a1d1ab41548ad493943.jpg",
     "index.html": "/Portfolio/index.html",
-    "main.0c2d0774.css.map": "/Portfolio/static/css/main.0c2d0774.css.map",
-    "main.6ba3ac8f.js.map": "/Portfolio/static/js/main.6ba3ac8f.js.map",
+    "main.340f532e.css.map": "/Portfolio/static/css/main.340f532e.css.map",
+    "main.6514a2d7.js.map": "/Portfolio/static/js/main.6514a2d7.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c2d0774.css",
-    "static/js/main.6ba3ac8f.js"
+    "static/css/main.340f532e.css",
+    "static/js/main.6514a2d7.js"
   ]
 }

@@ -17,11 +17,10 @@ export default function IntroPreview() {
     ]
 
     const [selectedImg, setSelectedImg] = useState(RegularImg)
-    const [isOnStartAnimationOn, setIsOnStartAnimationOn] = useState(false)
+    const [isOnStartAnimationOn, setIsOnStartAnimationOn] = useState(true)
     const [isAnimationOn, setIsAnimationOn] = useState(false)
 
     useEffect(() => {
-        setIsOnStartAnimationOn(true)
         const timer = setTimeout(() => {
             setSelectedImg(RegularImg)
             setIsOnStartAnimationOn(false)
@@ -32,11 +31,10 @@ export default function IntroPreview() {
     const handleSelectedBtn = (selectedImgSrc: string) => {
         if (selectedImgSrc === selectedImg) return
         setIsAnimationOn(true)
-        const timer = setTimeout(() => {
+        setTimeout(() => {
             setSelectedImg(selectedImgSrc)
             setIsAnimationOn(false)
         }, 240)
-        return () => clearTimeout(timer)
     }
 
     return (

@@ -1,6 +1,14 @@
 .container {
-    max-width: 1224px;
-    min-height: 100vh;
-    padding: 7rem 1.5rem 0 1.5rem;
-    margin: 0 auto;
+     z-index: 1;
+     min-height: 86vh;
+     max-height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+
+@media (max-width: 768px) {
+     .container {
+     }
 }

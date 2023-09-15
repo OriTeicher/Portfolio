@@ -1,22 +1,22 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.activeBackground": "#00446600",
-        "activityBar.background": "#00446600",
-        "activityBar.foreground": "#e7e7e7",
-        "activityBar.inactiveForeground": "#e7e7e799",
-        "activityBarBadge.background": "#000000",
-        "activityBarBadge.foreground": "#e7e7e7",
-        "commandCenter.border": "#e7e7e799",
-        "sash.hoverBorder": "#00446600",
-        "statusBar.background": "#00223300",
-        "statusBar.foreground": "#e7e7e7",
-        "statusBarItem.hoverBackground": "#00446600",
-        "statusBarItem.remoteBackground": "#00223300",
-        "statusBarItem.remoteForeground": "#e7e7e7",
-        "titleBar.activeBackground": "#00223300",
-        "titleBar.activeForeground": "#e7e7e7",
-        "titleBar.inactiveBackground": "#00223399",
-        "titleBar.inactiveForeground": "#e7e7e799"
-    },
-    "peacock.color": "#00223300"
+     "editor.find.autoFindInSelection": "never",
+     "editor.find.seedSearchStringFromSelection": true,
+     "search.autoGuessExcludeSetting": true,
+     "search.exclude": {
+          "**/node_modules": true,
+          "**/bower_components": true,
+          "**/.git": true,
+          "**/dist": true,
+          "**/out": true,
+          "**/build": true,
+          "**/tmp": true,
+          "**/temp": true,
+          "**/yarn-error.log": true,
+          "**/yarn.lock": true,
+          "**/package-lock.json": true,
+          "**/npm-debug.log": true
+     },
+     "search.useIgnoreFiles": true,
+     "search.useGlobalIgnoreFiles": true,
+     "search.followSymlinks": true
 }

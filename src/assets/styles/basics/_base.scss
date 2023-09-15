@@ -1,54 +1,56 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     scroll-behavior: smooth;
+     -webkit-tap-highlight-color: transparent;
 }
 
 html {
-    overflow: scroll;
-    overflow-x: hidden;
+     overflow: scroll;
+     overflow-x: hidden;
+     height: 150vh; //! todo: delete this
 }
 
 ::-webkit-scrollbar {
-    display: none;
+     display: none;
 }
 
 body {
-    font-family: 'Poppins', 'Times New Roman', Times, serif;
-    background-color: $mainColor001;
-    color: white;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
+     font-family: 'Poppins', 'Times New Roman', Times, serif;
+     background-color: $mainColor001;
+     color: white;
+     display: flex;
+     justify-content: center;
+     height: 100vh;
 }
 
 ul {
-    list-style: none;
+     list-style: none;
 }
 
 a {
-    text-decoration: none;
+     text-decoration: none;
 }
 
 .app-container {
-    display: flex;
-    height: fit-content;
-    justify-content: center;
+     display: flex;
+     height: fit-content;
+     justify-content: center;
 }
 
 button {
-    border: none;
-    &:hover {
-        background-color: $mainColor000;
-        scale: 1.05;
-    }
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    transition: 0.1s scale ease-in-out;
+     border: none;
+     &:hover {
+          background-color: $mainColor000;
+          scale: 1.05;
+     }
+     cursor: pointer;
+     font-family: 'Poppins', sans-serif;
+     transition: 0.1s scale ease-in-out;
 }
 
 button.selected {
-    background-color: $logoColor;
-    font-weight: 600;
+     background-color: $logoColor;
+     font-weight: 600;
 }

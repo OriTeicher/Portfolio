@@ -1,10 +1,12 @@
 .logo {
-    color: $logoColor;
-    span {
-        color: #fff;
-    }
-    cursor: pointer;
-    &:hover {
-        filter: brightness(70%);
-    }
+     color: $logoColor;
+     span {
+          color: #fff;
+     }
+     font-size: 2em;
+     cursor: pointer;
+     &:hover {
+          filter: brightness(90%);
+          animation: $pulse;
+     }
 }

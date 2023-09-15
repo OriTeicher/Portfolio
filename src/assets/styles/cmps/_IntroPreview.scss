@@ -1,13 +1,24 @@
 .intro-container {
     margin-top: 50px;
     gap: 20px;
+    .img-container.flipped .main-photo {
+        transform: rotateY(180deg);
+    }
     .main-photo {
+        perspective: 1000px;
+        backface-visibility: hidden;
+        border: 1px solid gray;
         width: 250px;
         height: 250px;
         border-radius: 50%;
+        transition: transform 0.5s ease-in-out;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
     }
     .main-header {
         font-size: 2rem;
+        display: flex;
+        gap: 20px;
         span {
             color: $logoColor;
         }
@@ -28,13 +39,36 @@
     .btns-container {
         text-align: center;
         gap: 20px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         flex-wrap: wrap;
         button {
             width: 200px;
             font-size: 1.2em;
             border-radius: 20px;
             padding: 5px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .intro-container {
+        .main-header {
+            font-size: 1.5rem;
+        }
+        .role-header {
+            font-size: 1rem;
+        }
+        .description {
+            font-size: 1rem;
+        }
+        .btns-container {
+            grid-template-columns: 1fr 1fr;
+            button {
+                width: 40vw;
+                font-size: 0.9em;
+                border-radius: 20px;
+                padding: 5px;
+            }
         }
     }
 }

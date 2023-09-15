@@ -1,16 +1,15 @@
 .contact-icons-container {
-  gap: 5px;
-  a {
-    cursor: pointer;
-    &:hover {
-      filter: brightness(90%);
+    gap: 3px;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    .icon {
+        svg {
+            color: $mainColor000;
+            font-size: 1.5rem;
+            &:hover {
+                color: $logoColor;
+            }
+        }
     }
-  }
-}
-
-.icon {
-  svg {
-    color: $logoColor;
-    font-size: 1.8em;
-  }
 }

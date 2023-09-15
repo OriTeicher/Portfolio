@@ -1,13 +1,10 @@
 .navbar-container {
-    background-color: $mainColor002;
+    position: sticky;
+    top: 0;
     width: 100vw;
-    box-shadow: 1px 1px 1px rgb(48, 48, 48);
-    li {
-        cursor: pointer;
-        &:hover {
-            filter: brightness(90%);
-        }
-    }
+    padding: 3px 0px;
+    z-index: 10;
+    box-shadow: 1px 1px 1px rgb(27, 27, 27);
 }
 
 .nav-options-container {

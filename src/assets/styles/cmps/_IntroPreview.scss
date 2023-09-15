@@ -6,12 +6,12 @@
           transform: rotateY(160deg);
      }
      .main-img {
-          backface-visibility: hidden;
           width: 300px;
           height: 300px;
           border-radius: 50%;
-          transition: transform 0.5s ease-in-out;
+          transition: transform 0.4s ease-in-out;
           transform-style: preserve-3d;
+          box-shadow: 1px 1.5px 1px $mainColor000;
           backface-visibility: hidden;
      }
      .main-header {

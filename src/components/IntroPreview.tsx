@@ -48,7 +48,7 @@ export default function IntroPreview() {
                               Hello there! Im <span>Ori Teicher</span>,<br /> and this is my Portfoli<span>Ori</span>
                          </p>
                     </div>
-                    <h2 className="role-header">Full S tack / Frontend Developer</h2>
+                    <h2 className="role-header">Full Stack / Frontend Developer</h2>
                </div>
                <div className="flex column text-align-center justify-center">
                     <p className="description">You are more than welcome to see me as...</p>

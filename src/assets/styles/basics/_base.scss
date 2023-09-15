@@ -31,19 +31,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    cursor: pointer;
-    color: $logoColor;
-    transition: 0.2s color ease-in-out;
-}
-
-li {
-    &:hover {
-        color: $logoColor;
-        cursor: pointer;
-    }
-}
-
 .app-container {
     display: flex;
     height: fit-content;

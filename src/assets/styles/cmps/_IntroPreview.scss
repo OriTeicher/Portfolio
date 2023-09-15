@@ -1,4 +1,6 @@
 .intro-container {
+    opacity: 0;
+    transition: opacity 3s, transform 1s;
     margin-top: 50px;
     gap: 20px;
     .img-container.flipped .main-photo {
@@ -7,7 +9,6 @@
     .main-photo {
         perspective: 1000px;
         backface-visibility: hidden;
-        border: 1px solid gray;
         width: 250px;
         height: 250px;
         border-radius: 50%;
@@ -16,7 +17,10 @@
         backface-visibility: hidden;
     }
     .main-header {
+        font-weight: 600;
         font-size: 2rem;
+        border-radius: 10px;
+        padding: 5px 15px;
         display: flex;
         gap: 20px;
         span {
@@ -48,6 +52,15 @@
             padding: 5px;
         }
     }
+}
+
+.intro-container.fade-in-slide-in {
+    transform: translateX(-100%);
+}
+
+.intro-container.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 @media (max-width: 1000px) {

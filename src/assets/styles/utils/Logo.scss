@@ -3,4 +3,8 @@
     span {
         color: #fff;
     }
+    cursor: pointer;
+    &:hover {
+        filter: brightness(70%);
+    }
 }

@@ -1,51 +1,60 @@
 .flex {
-    display: flex;
+     display: flex;
 }
 
 .grid {
-    display: grid;
+     display: grid;
+}
+
+.flex-col {
+     display: flex;
+     flex-direction: column;
+}
+
+.col {
+     flex-direction: column;
 }
 
 .row {
-    flex-direction: row;
+     flex-direction: row;
 }
 
 .column {
-    flex-direction: column;
+     flex-direction: column;
 }
 
 .align-center {
-    align-items: center;
+     align-items: center;
 }
 
 .align-start {
-    align-items: start;
+     align-items: start;
 }
 
 .align-end {
-    align-items: end;
+     align-items: end;
 }
 
 .justify-center {
-    justify-content: center;
+     justify-content: center;
 }
 
 .space-between {
-    justify-content: space-between;
+     justify-content: space-between;
 }
 
 .space-evenly {
-    justify-content: space-evenly;
+     justify-content: space-evenly;
 }
 
 .text-align-center {
-    text-align: center;
+     text-align: center;
 }
 
 .show {
-    opacity: 1;
+     opacity: 1;
 }
 
 .hide {
-    opacity: 0;
+     opacity: 0;
 }

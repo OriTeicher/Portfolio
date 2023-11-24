@@ -1,9 +1,13 @@
 .intro-container {
      opacity: 0;
-     transition: opacity 1.5s ease-in-out, transform 1s ease-in-out;
+     transition: opacity 2.5s ease-in-out, transform 1.5s ease-in-out;
      gap: 20px;
      .img-container.flipped .main-img {
           transform: rotateY(160deg);
+     }
+     .img-container.hovered .main-img {
+          cursor: pointer;
+          filter: brightness(90%);
      }
      .main-img {
           width: 300px;
@@ -13,6 +17,8 @@
           transform-style: preserve-3d;
           box-shadow: 1px 1.5px 1px $mainColor000;
           backface-visibility: hidden;
+          position: 50% 50%;
+          object-fit: cover;
      }
      .main-header {
           font-weight: 600;
@@ -56,7 +62,7 @@
 }
 
 .intro-container.fade-in-slide-in {
-     transform: translateX(-120%);
+     transform: translateX(-100%);
 }
 
 .intro-container.show {

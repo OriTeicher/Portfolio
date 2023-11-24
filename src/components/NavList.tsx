@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useState } from 'react'
 
 export default function NavList() {
@@ -8,7 +9,7 @@ export default function NavList() {
      }
 
      return (
-          <div className={`nav-container flex ${isMenuOpen ? 'open' : ''}`}>
+          <motion.div className={`nav-container flex ${isMenuOpen ? 'open' : ''}`} transition={{ duration: 2 }} initial={{ y: -400 }} animate={{ y: 0 }}>
                <button className="menu-button" onClick={toggleMenu}>
                     <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
                </button>
@@ -19,6 +20,6 @@ export default function NavList() {
                     <li>Skills & Hobbies</li>
                     <li>Contact</li>
                </ul>
-          </div>
+          </motion.div>
      )
 }

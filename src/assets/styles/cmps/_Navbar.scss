@@ -1,14 +1,20 @@
 .navbar-container {
      background-color: $mainColor001;
-     opacity: 1;
+     opacity: 0;
      justify-content: space-evenly;
      transform: translateX(100%);
      position: sticky;
-     transition: 2s opacity ease-in-out, 1s transform;
+     transition: 2s opacity ease-in-out, 1.5s transform;
      top: 0;
      width: 100vw;
      padding: 8px 0px;
+     transition: 0.2s filter ease-in-out, 0.3s background ease-in-out;
+}
+
+.navbar-container.scroll {
      z-index: 100;
+     backdrop-filter: blur(20px);
+     background: hsla(0, 0%, 100%, 0.034);
 }
 
 .nav-options-container {
@@ -27,15 +33,14 @@
 }
 
 .navbar-container.show {
+     opacity: 1;
      transform: translate(0);
-     border-bottom: $hoverColor001 solid 1px;
 }
 
 @media (max-width: 768px) {
      .navbar-container {
           justify-content: space-between;
           padding: 5px 20px;
-          border-bottom: $hoverColor001 solid 1px;
           &:nth-child(2) {
                position: absolute;
                bottom: 0;

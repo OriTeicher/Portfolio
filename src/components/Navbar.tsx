@@ -1,29 +1,22 @@
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import ContactIcons from './ContactIcons'
 import NavList from './NavList'
+import Logo from './Logo'
 
 export default function Navbar() {
-     const [isAnimationOn, setIsAnimationOn] = useState(true)
-     useEffect(() => {
-          setTimeout(() => {
-               setIsAnimationOn(false)
-          }, 700)
-     }, [])
+     const [isScroll, setIsScroll] = useState(false)
 
+     useEffect(() => {
+          window.addEventListener('scroll', () => {
+               setIsScroll(window.scrollY > 20)
+          })
+     }, [])
      return (
-          <section className={`navbar-container flex align-center ${isAnimationOn ? 'hide slide-in-right' : 'show'}`}>
-               <h3 className="logo">
-                    <span>{'<'}</span>
-                    Ori
-                    <span>
-                         Dev
-                         <span />
-                    </span>
-                    {' /'}
-                    <span>{'>'}</span>
-               </h3>
+          <motion.section className={`navbar-container flex show align-center ${isScroll ? 'scroll' : ''}`}>
+               <Logo />
                <NavList />
                <ContactIcons />
-          </section>
+          </motion.section>
      )
 }

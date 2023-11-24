@@ -1,4 +1,7 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
+import { motion } from 'framer-motion'
+import { WavingHandRounded } from '@mui/icons-material'
+
 import SupermanImg from '../assets/photos/super-ori.png'
 import AnimeImg from '../assets/photos/ori-anime.png'
 import RegularImg from '../assets/photos/regular ori.jpg'
@@ -7,6 +10,7 @@ import CaptainImg from '../assets/photos/ori-captain.png'
 import PinzziPhoto from '../assets/photos/oris-dog.jpg'
 
 export default function IntroPreview() {
+     // eslint-disable-next-line react-hooks/exhaustive-deps
      const imageOptions = [
           { imgSrc: RegularImg, label: 'Just Ori...' },
           { imgSrc: PinzziPhoto, label: 'My Beloved Dog' },
@@ -17,49 +21,57 @@ export default function IntroPreview() {
      ]
 
      const [selectedImg, setSelectedImg] = useState(RegularImg)
-     const [isOnStartAnimationOn, setIsOnStartAnimationOn] = useState(true)
      const [isAnimationOn, setIsAnimationOn] = useState(false)
+     const [isImgHovered, setIsImgHovered] = useState(false)
+     const [areImagesLoaded, setAreImagesLoaded] = useState(false)
 
      useEffect(() => {
-          const timer = setTimeout(() => {
-               setSelectedImg(RegularImg)
-               setIsOnStartAnimationOn(false)
-          }, 500)
-          return () => clearTimeout(timer)
-     }, [])
+          const imagePromises = imageOptions.map((option) => {
+               return new Promise((resolve, reject) => {
+                    const img = new Image()
+                    img.src = option.imgSrc
+                    img.onload = () => resolve('')
+                    img.onerror = () => reject('')
+               })
+          })
+
+          Promise.all(imagePromises)
+               .then(() => setAreImagesLoaded(true))
+               .catch(() => setAreImagesLoaded(false))
+     }, [imageOptions])
 
      const handleSelectedBtn = (selectedImgSrc: string) => {
-          if (selectedImgSrc === selectedImg) return
+          if (selectedImgSrc === selectedImg || !areImagesLoaded) return
           setIsAnimationOn(true)
           setTimeout(() => {
                setSelectedImg(selectedImgSrc)
                setIsAnimationOn(false)
-          }, 240)
+          }, 180)
      }
 
      return (
-          <article className={`container intro-container flex align-center column ${isOnStartAnimationOn ? 'fade-in-slide-in' : 'show'}`}>
-               <div className={`img-container ${isAnimationOn ? 'flipped' : ''}`}>
-                    <img src={selectedImg} alt="🖼️" className="main-img" />
+          <motion.article transition={{ duration: 0.5 }} initial={{ y: -1000 }} animate={{ y: 0 }} className={`container intro-container flex align-center column show`}>
+               <div className={`img-container ${isAnimationOn ? 'flipped' : ''} ${isImgHovered ? 'hovered' : ''}`}>
+                    <img src={selectedImg} alt="🖼️" className="main-img" onMouseEnter={() => setIsImgHovered(true)} onMouseLeave={() => setIsImgHovered(false)} />
                </div>
                <div className="main-header-container">
                     <div className="main-header text-align-center">
                          <p>
-                              Hello there! Im <span>Ori Teicher</span>,<br /> and this is my Portfoli<span>Ori</span>
+                              Hello there <WavingHandRounded /> Im <span>Ori Teicher</span>,
                          </p>
                     </div>
                     <h2 className="role-header">Full Stack / Frontend Developer</h2>
                </div>
                <div className="flex column text-align-center justify-center">
-                    <p className="description">You are more than welcome to see me as...</p>
-                    <div className="btns-container grid justify-center align-center">
+                    {areImagesLoaded ? <p className="description">You are more than welcome to see me as...</p> : <p className="description">Loading images...</p>}
+                    <motion.div transition={{ duration: 2 }} initial={{ x: -3000, y: 0, opacity: 0 }} animate={{ x: 0, y: 0, opacity: 1 }} className="btns-container grid justify-center align-center">
                          {imageOptions.map((option) => (
-                              <button key={option.label} onClick={() => handleSelectedBtn(option.imgSrc)} className={selectedImg === option.imgSrc ? 'selected' : ''}>
+                              <button key={option.label} onClick={() => handleSelectedBtn(option.imgSrc)} className={selectedImg === option.imgSrc ? 'selected' : ''} disabled={!areImagesLoaded}>
                                    {option.label}
                               </button>
                          ))}
-                    </div>
+                    </motion.div>
                </div>
-          </article>
+          </motion.article>
      )
 }

@@ -9,7 +9,6 @@
 html {
      overflow: scroll;
      overflow-x: hidden;
-     height: 150vh; //! todo: delete this
 }
 
 ::-webkit-scrollbar {
@@ -22,7 +21,7 @@ body {
      color: white;
      display: flex;
      justify-content: center;
-     height: 100vh;
+     min-height: 150vh;
 }
 
 ul {
@@ -43,7 +42,7 @@ button {
      border: none;
      &:hover {
           background-color: $mainColor000;
-          scale: 1.05;
+          scale: 1.01;
      }
      cursor: pointer;
      font-family: 'Poppins', sans-serif;

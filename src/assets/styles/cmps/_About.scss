@@ -1,0 +1,141 @@
+.about-container {
+     position: relative;
+     margin-bottom: 1500px;
+     button {
+          outline: none;
+          border: none;
+          padding: 0px 20px;
+          font-size: 25px;
+          background: linear-gradient(rgba(128, 128, 128, 0.297), rgba(230, 230, 250, 0.5));
+          color: lavenderblush;
+          &:hover {
+               background: linear-gradient(rgba(128, 128, 128, 0.297), lavender);
+               scale: 1;
+          }
+     }
+     .right-btn {
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: 0px 20px 0px 20px;
+     }
+     .left-btn {
+          position: absolute;
+          border-radius: 20px 0px 20px 0px;
+          bottom: 0;
+          right: 0;
+     }
+}
+
+.about-details-container {
+     background: linear-gradient(to right, #101010, rgba(230, 230, 250, 0.452));
+     width: 50vw;
+     height: fit-content;
+     padding: 50px 0px;
+     font-size: 1.1em;
+     border-radius: 0px 0px 0px 20px;
+     position: relative;
+     h3 {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+     }
+}
+
+.skills-container {
+     border-radius: 0px 0px 20px 0px;
+     width: 50vw;
+     background: linear-gradient(to left, #101010, rgba(230, 230, 250, 0.452));
+     h1 {
+          font-size: 1.5rem;
+          padding: 10px;
+     }
+}
+
+.about-img {
+     width: 200px;
+     height: 200px;
+     border-radius: 50%;
+     transition: transform 5s ease-in-out;
+     box-shadow: 1px 1px 1px lavender;
+     backface-visibility: hidden;
+     object-fit: cover;
+}
+
+.express-logo {
+     color: lavender;
+}
+
+.logos-grid {
+     grid-template-columns: repeat(5, 1fr);
+     justify-items: center;
+     gap: 10px;
+     i {
+          font-size: 6em;
+     }
+     svg {
+          width: 50px;
+          rotate: -135deg;
+          height: fit-content;
+     }
+     align-items: center;
+}
+
+.bullet-container {
+     display: flex;
+     margin: 0px;
+     padding: 0px;
+}
+
+.bullet-svg {
+     background-color: lavender;
+}
+
+@keyframes spin {
+     0% {
+          transform: rotate(0deg);
+     }
+     100% {
+          transform: rotate(360deg);
+     }
+}
+.details-container {
+     h2 {
+          margin-bottom: 15px;
+     }
+}
+
+@media (max-width: 1200px) {
+     .about-container {
+          margin-bottom: 50px;
+          width: 100%;
+          margin: auto;
+          flex-direction: column;
+          .about-details-container,
+          .skills-container {
+               border-radius: 0px;
+               width: 100%;
+               background: linear-gradient(to right, #101010, rgba(230, 230, 250, 0.452));
+          }
+
+          .skills-container {
+               .logos-grid {
+                    gap: 3px;
+                    font-size: 0.9em;
+               }
+          }
+
+          .about-details-container {
+               text-align: left;
+               justify-items: center;
+               flex-direction: column;
+               align-items: center;
+               img {
+                    margin-bottom: 1%;
+               }
+               h2 {
+                    margin: 0px;
+               }
+          }
+     }
+}

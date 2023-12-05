@@ -1,17 +1,21 @@
 .intro-container {
+     position: relative;
      opacity: 0;
      transition: opacity 2.5s ease-in-out, transform 1.5s ease-in-out;
      gap: 20px;
+     .img-container {
+          top: 64px;
+          z-index: 200;
+     }
      .img-container.flipped .main-img {
           transform: rotateY(160deg);
      }
      .img-container.hovered .main-img {
           cursor: pointer;
-          filter: brightness(90%);
      }
      .main-img {
-          width: 300px;
-          height: 300px;
+          width: 350px;
+          height: 350px;
           border-radius: 50%;
           transition: transform 0.4s ease-in-out;
           transform-style: preserve-3d;
@@ -68,6 +72,11 @@
 .intro-container.show {
      opacity: 1;
      transform: translateX(0);
+}
+
+.main-header-container,
+.btns-container {
+     transition: opacity 0.2s ease-in-out;
 }
 
 @media (max-width: 1000px) {

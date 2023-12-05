@@ -19,8 +19,8 @@
           border-radius: 50%;
           transition: transform 0.4s ease-in-out;
           transform-style: preserve-3d;
-          box-shadow: 1px 1.5px 1px $mainColor000;
           backface-visibility: hidden;
+          box-shadow: 2px 2px 2px lavender;
           position: 50% 50%;
           object-fit: cover;
      }
@@ -53,13 +53,14 @@
      }
      .btns-container {
           text-align: center;
-          gap: 20px;
+          gap: 4px;
+
           grid-template-columns: 1fr 1fr 1fr;
           flex-wrap: wrap;
           button {
+               font-weight: 900;
                width: 200px;
                font-size: 1.2em;
-               border-radius: 20px;
                padding: 5px;
           }
      }

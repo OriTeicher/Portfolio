@@ -3,6 +3,7 @@ import About from './About'
 import IntroPreview from './IntroPreview'
 import RegularImg from '../assets/photos/regular ori.jpg'
 import Projects from './Projects'
+import Hobbies from './Hobbies'
 
 export default function AppIndex() {
      const [selectedCharacter, setSelectedCharacter] = useState(RegularImg)
@@ -12,9 +13,12 @@ export default function AppIndex() {
      }
 
      return (
-          <section className="app-index-container">
+          <section className="app-index-container m-bottom1000">
                <IntroPreview onSelectedCharacter={handleSelectedCharacter} />
-               <About selectedCharacter={selectedCharacter} />
+               <div className="flex column">
+                    <About selectedCharacter={selectedCharacter} />
+                    <Hobbies selectedCharacter={selectedCharacter} />
+               </div>
                <Projects />
           </section>
      )

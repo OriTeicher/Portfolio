@@ -16,12 +16,12 @@ interface IndexProps {
 export default function IntroPreview(props: IndexProps) {
      // eslint-disable-next-line react-hooks/exhaustive-deps
      const imageOptions = [
-          { imgSrc: RegularImg, label: 'Just Ori...' },
-          { imgSrc: PinzziPhoto, label: 'My Beloved Dog' },
-          { imgSrc: SupermanImg, label: 'Teicherman' },
-          { imgSrc: VintageImg, label: 'Peaky Blinder' },
-          { imgSrc: AnimeImg, label: 'Main Character' },
-          { imgSrc: CaptainImg, label: 'Captain Kfar Sava' }
+          { imgSrc: RegularImg, label: 'Just Ori...'.toUpperCase() },
+          { imgSrc: PinzziPhoto, label: 'My Beloved Dog'.toUpperCase() },
+          { imgSrc: SupermanImg, label: 'Teicherman'.toUpperCase() },
+          { imgSrc: VintageImg, label: 'Peaky Blinder'.toUpperCase() },
+          { imgSrc: AnimeImg, label: 'Main Character'.toUpperCase() },
+          { imgSrc: CaptainImg, label: 'Captain Kfar Sava'.toUpperCase() }
      ]
      const [isScroll, setIsScroll] = useState(false)
      const [selectedImg, setSelectedImg] = useState(RegularImg)
@@ -61,10 +61,10 @@ export default function IntroPreview(props: IndexProps) {
 
      return (
           <motion.article
-               transition={{ duration: 0.5 }}
+               transition={{ duration: 1.5 }}
                initial={{ y: -1000 }}
                animate={{ y: 0, opacity: isScroll ? 0 : 1 }}
-               className={`container intro-container flex align-center column show ${isScroll ? 'hide' : ''}`}
+               className={`container intro-container flex align-center column show ${isScroll && window.innerWidth > 1000 ? 'hide' : ''}`}
           >
                <div className={`img-container ${isAnimationOn ? 'flipped' : ''} ${isImgHovered ? 'hovered' : ''}`}>
                     <img src={selectedImg} alt="🖼️" className="main-img" onMouseEnter={() => setIsImgHovered(true)} onMouseLeave={() => setIsImgHovered(false)} />
@@ -76,7 +76,7 @@ export default function IntroPreview(props: IndexProps) {
                          </p>
                     </div>
                     <h2 className="role-header">Full Stack / Frontend Developer</h2>
-                    {areImagesLoaded ? <p className="description">This is not a regular portfolio... choose your player:</p> : <p className="description">Loading images...</p>}
+                    {areImagesLoaded ? <p className="description">This is not a regular portfolio... choose your player :</p> : <p className="description">Loading images...</p>}
                </div>
                <div className={`flex column text-align-center justify-center`}>
                     <motion.div transition={{ duration: 2 }} initial={{ x: 0, y: 3000 }} animate={{ y: 0, x: 0, opacity: 1 }} className={`btns-container grid justify-center align-center`}>

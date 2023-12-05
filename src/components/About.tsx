@@ -1,7 +1,6 @@
 import { motion, useAnimation } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import LogosGrid from './LogosGrid'
-import BulletSVG from './svgs/BulletSVG'
 
 interface IndexProps {
      selectedCharacter: string
@@ -29,18 +28,13 @@ export default function About(props: IndexProps) {
                          >
                               <motion.img src={props.selectedCharacter} className="about-img" animate={controls} />
                               <div className="details-container flex column">
-                                   <h2>How are we doing today?</h2>
-                                   <p>Ori, 24 years old from Kfar-Sava Israel</p>
-                                   <p>Full-Stacking / Front-ending for a living</p>
-                                   <p>I'm a pianist & guitarist (learned from YouTube)</p>
-                                   <p>and also a big Tottenham Hotspurs fan 🤍</p>
+                                   <h2>Nice to meet ya!</h2>
+                                   <div className="flex column justify-center ">
+                                        <p>Im Ori, from Kfar Sava Israel</p>
+                                        <p>Full-Stacking / Front-Ending for a living</p>
+                                        <p>and also a big Tottenham Hotspurs fan 🤍</p>
+                                   </div>
                               </div>
-                              {/* <button className="left-btn" onClick={() => {}}>
-                                   +
-                              </button>
-                              <button className="right-btn" onClick={() => {}}>
-                                   -
-                              </button> */}
                          </motion.div>
 
                          <motion.section

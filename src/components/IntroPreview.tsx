@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { WavingHandRounded } from '@mui/icons-material'
-
 import SupermanImg from '../assets/photos/super-ori.png'
 import AnimeImg from '../assets/photos/ori-anime.png'
 import RegularImg from '../assets/photos/regular ori.jpg'
@@ -61,7 +60,7 @@ export default function IntroPreview(props: IndexProps) {
 
      return (
           <motion.article
-               transition={{ duration: 1.5 }}
+               transition={{ duration: 0.5 }}
                initial={{ y: -1000 }}
                animate={{ y: 0, opacity: isScroll ? 0 : 1 }}
                className={`container intro-container flex align-center column show ${isScroll && window.innerWidth > 1000 ? 'hide' : ''}`}

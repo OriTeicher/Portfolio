@@ -4,11 +4,7 @@ import { useState } from 'react'
 export default function Projects() {
      const projects = []
      const [isShown, setIsShown] = useState(false)
-     const [myProjects, setMyProjects] = useState<[]>([])
+     const [myProjects, setMyProjects] = useState(null)
 
-     return (
-          <motion.section className="projects-container">
-               <div></div>
-          </motion.section>
-     )
+     return <motion.section className="projects-container"></motion.section>
 }

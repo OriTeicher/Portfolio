@@ -93,19 +93,19 @@
                height: 250px;
           }
           .description {
-               font-size: 1.1rem;
+               text-align: center;
+               width: 400px;
                margin: auto;
                margin-bottom: 15px;
           }
           .btns-container {
                grid-template-columns: 1fr 1fr;
-               gap: 10px;
+               gap: 5px;
                width: 95vw;
                font-size: 1.1rem;
                button {
                     width: 100%;
                     font-size: 0.9em;
-                    border-radius: 20px;
                     padding: 10px 0px;
                }
           }

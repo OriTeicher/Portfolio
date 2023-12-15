@@ -8,9 +8,14 @@ export default function Navbar() {
      const [isScroll, setIsScroll] = useState(false)
 
      useEffect(() => {
-          window.addEventListener('scroll', () => {
+          const handleScroll = () => {
                setIsScroll(window.scrollY > 20)
-          })
+          }
+          window.addEventListener('scroll', handleScroll, { passive: false })
+
+          return () => {
+               window.removeEventListener('scroll', handleScroll)
+          }
      }, [])
      return (
           <motion.section className={`navbar-container flex show align-center ${isScroll ? 'scroll' : ''}`}>

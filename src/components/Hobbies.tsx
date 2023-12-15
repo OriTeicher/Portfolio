@@ -1,5 +1,5 @@
 import { MusicNoteRounded } from '@mui/icons-material'
-import { motion, useAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 interface IndexProps {
@@ -8,7 +8,6 @@ interface IndexProps {
 
 export default function Hobbies(props: IndexProps) {
      const [isShown, setIsShown] = useState(false)
-     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
      const songData = {
           guitar: [

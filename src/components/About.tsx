@@ -40,7 +40,7 @@ export default function About(props: IndexProps) {
                          <motion.section
                               className="flex column align-center justify-center skills-container"
                               transition={{ duration: 1.8 }}
-                              initial={{ y: 0, opacity: 0, x: 2000, borderRadius: 1000 }}
+                              initial={{ y: 0, opacity: 0, x: 2000, borderRadius: 1500 }}
                               animate={{ opacity: 1, x: 0, borderRadius: 0 }}
                          >
                               <div className="flex">
